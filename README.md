@@ -6,9 +6,11 @@ This project implements a deep learning-based system for detecting American Sign
 
 - Supports **GPU acceleration (CUDA)** for faster model training and inference
 - Uses **ResNet18** as the base model with pretrained ImageNet weights
-- Provides a **GUI** interface for predicting ASL signs from images
+- Provides a **modern GUI** interface with ttkbootstrap styling
+- Dark/Light theme toggle for better user experience
 - High accuracy on the ASL dataset
 - Easy-to-run training and prediction scripts
+- Robust error handling and user feedback
 
 ---
 
@@ -17,10 +19,12 @@ This project implements a deep learning-based system for detecting American Sign
 - Python 3.7+
 - CUDA-capable GPU (Optional, for better performance)
 - PyTorch with CUDA support (if using GPU)
+- ttkbootstrap for modern GUI styling
 
 The dependencies are listed in the `requirements.txt` file:
 ```bash
 pip install -r requirements.txt
+```
 
 ## Installation
 
@@ -34,8 +38,7 @@ pip install -r requirements.txt
 
 The system uses the ASL Alphabet dataset, which should be placed in the following directory structure:
 ```
-<your_dataset_path>/asl_alphabet_train/asl_alphabet_train/
-
+D:/archive/asl_alphabet_train/asl_alphabet_train/
 ```
 
 ## Usage
@@ -59,7 +62,11 @@ To make predictions on new images, run:
 python predict.py
 ```
 
-When prompted, enter the path to the image you want to classify. The system will output the predicted ASL sign.
+The prediction GUI provides:
+- Image upload functionality
+- Real-time prediction display with confidence scores
+- Dark/Light theme toggle
+- Error handling with user-friendly messages
 
 ## 🧠 Model Architecture
 Base model: ResNet18 pretrained on ImageNet
@@ -79,15 +86,21 @@ Training Device: GPU (if available)
 ## 📈 Performance
 The model achieves high accuracy on the ASL dataset. Training progress is displayed in real-time, including:
 
-Current epoch
-
-Training loss
-
-Training accuracy
-
-Progress bar (via tqdm)
+- Current epoch
+- Training loss
+- Training accuracy
+- Progress bar (via tqdm)
 
 The best model based on validation accuracy is automatically saved.
+
+## 🖥️ GUI Features
+The prediction interface includes:
+
+- Modern styling with ttkbootstrap
+- Dark/Light theme toggle
+- Confidence percentage display
+- Error handling with user-friendly messages
+- Responsive layout
 
 ## 📄 License
 This project is licensed under the MIT License - see the LICENSE file for details.
