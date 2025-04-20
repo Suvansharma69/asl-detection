@@ -36,9 +36,15 @@ pip install -r requirements.txt
 
 ## Dataset
 
-The system uses the ASL Alphabet dataset, which should be placed in the following directory structure:
+The system uses the ASL Alphabet dataset. You need to:
+
+1. Download the ASL Alphabet dataset
+2. Extract it to a directory of your choice
+3. Update the dataset path in the code files if needed
+
+The expected directory structure is:
 ```
-D:/archive/asl_alphabet_train/asl_alphabet_train/
+<your_dataset_path>/asl_alphabet_train/asl_alphabet_train/
 ```
 
 ## Usage
